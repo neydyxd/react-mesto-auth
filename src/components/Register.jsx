@@ -29,8 +29,8 @@ function Register({isLoggedIn, onRegister}){
         <div className='register'>
                 <p className='register__title'>Регистрация</p>
                     <form className='register__form' onSubmit={handleSubmit}>
-                        <input className='register__input' placeholder='Email' type="email" name="email" id="email" onChange={handleEmailChange} />
-                        <input className='register__input' placeholder='Password' type="password" name="password" id="password" onChange={handlePasswordChange} />
+                        <input className='register__input' value={email} placeholder='Email' type="email" name="email" id="email" onChange={handleEmailChange} />
+                        <input className='register__input' value={password} placeholder='Password' type="password" name="password" id="password" onChange={handlePasswordChange} />
                         <button type='submit' className='register__submit'>Зарегистрироваться</button>
                     </form>
                     <div className='register__signin'>
