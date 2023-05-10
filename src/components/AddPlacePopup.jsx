@@ -2,8 +2,8 @@ import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
 function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
-  const [name, setName] = React.useState('');
-  const [link, setLink] = React.useState('');
+  const [name, setName] = React.useState("");
+  const [link, setLink] = React.useState("");
 
   function handleNameChange(e) {
     setName(e.target.value);
@@ -22,8 +22,8 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   }
 
   React.useEffect(() => {
-    setName('');
-    setLink('');
+    setName("");
+    setLink("");
   }, [isOpen]);
 
   return (
@@ -33,12 +33,32 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       onClose={onClose}
       onSubmit={handleSubmit}
       button="Создать"
-      name='add'
+      name="add"
     >
-      <input id="popup__poster" value={name} onChange={handleNameChange} className="popup__input popup__input_title" name="add"  placeholder="Название" type="text"  minLength="2" maxLength="30" required />
-          <span className="popup__input-error popup__poster-error"></span>
-          <input id="popup__url" value={link} onChange={handleLinkChange} className="popup__input popup__input_link" type="url" name="link" placeholder="Ссылка на картинку" required />
-          <span className="popup__input-error popup__url-error"></span>
+      <input
+        id="popup__poster"
+        value={name}
+        onChange={handleNameChange}
+        className="popup__input popup__input_title"
+        name="add"
+        placeholder="Название"
+        type="text"
+        minLength="2"
+        maxLength="30"
+        required
+      />
+      <span className="popup__input-error popup__poster-error"></span>
+      <input
+        id="popup__url"
+        value={link}
+        onChange={handleLinkChange}
+        className="popup__input popup__input_link"
+        type="url"
+        name="link"
+        placeholder="Ссылка на картинку"
+        required
+      />
+      <span className="popup__input-error popup__url-error"></span>
     </PopupWithForm>
   );
 }
