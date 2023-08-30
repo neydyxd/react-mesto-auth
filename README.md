@@ -21,7 +21,7 @@ Fromtend сервиса Mesto React, где пользователь может 
 
 ## Инструкция по установке:
 1. Клонировать репозиторий
-`git clone https://github.com/Sonyamaster1/react-mesto-auth.git`
+`git clone https://github.com/neydyxd/react-mesto-auth.git`
 2. Установить зависимости
 `npm i`
 3. Запустить локал
